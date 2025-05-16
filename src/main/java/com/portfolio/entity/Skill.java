@@ -26,7 +26,7 @@ public class Skill {
     private String category;
 
     @Column(name = "proficiency_level")
-    private Integer proficiencyLevel; // 1-100
+    private Integer proficiencyLevel;
 
     private String description;
 } 
