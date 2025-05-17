@@ -1,15 +1,18 @@
-import { Outlet } from 'react-router-dom'
-import Navbar from './Navbar'
 import Footer from './Footer'
-
+import Sidebar from '../Sidebar'
+import Slider from '../Slider'
 
 const Layout = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-grow">
-        <Outlet />
-      </main>
+      <div className="flex flex-1">
+        <Sidebar />
+        <main className="flex-grow">
+          <Slider />
+          {/* Diğer sayfalar için aşağıdaki satırı aktif bırakabilirsin: */}
+          {/* <Outlet /> */}
+        </main>
+      </div>
       <Footer />
     </div>
   )
