@@ -23,9 +23,13 @@ public class ProfileController {
         return ResponseEntity.ok(profileService.getProfileByUserId(userId));
     }
 
-    @Operation(summary = "Update profile by user id")
+    @Operation(summary = "Create or update profile by user id")
     @PutMapping("/{userId}")
-    public ResponseEntity<ProfileResponse> updateProfile(@PathVariable Long userId, @RequestBody ProfileRequest request) {
-        return ResponseEntity.ok(profileService.updateProfile(userId, request));
+    public ResponseEntity<ProfileResponse> createOrUpdateProfile(@PathVariable Long userId, @RequestBody ProfileRequest request) {
+        try {
+            return ResponseEntity.ok(profileService.updateProfile(userId, request));
+        } catch (Exception e) {
+            return ResponseEntity.ok(profileService.createProfile(userId, request));
+        }
     }
 } 

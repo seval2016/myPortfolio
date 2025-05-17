@@ -3,8 +3,10 @@ package com.portfolio.service.impl;
 import com.portfolio.dto.request.ProfileRequest;
 import com.portfolio.dto.response.ProfileResponse;
 import com.portfolio.entity.Profile;
+import com.portfolio.entity.User;
 import com.portfolio.exception.ResourceNotFoundException;
 import com.portfolio.repository.ProfileRepository;
+import com.portfolio.repository.UserRepository;
 import com.portfolio.service.ProfileService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,6 +17,31 @@ import org.springframework.transaction.annotation.Transactional;
 public class ProfileServiceImpl implements ProfileService {
 
     private final ProfileRepository profileRepository;
+    private final UserRepository userRepository;
+
+    @Override
+    @Transactional
+    public ProfileResponse createProfile(Long userId, ProfileRequest request) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + userId));
+
+        Profile profile = new Profile();
+        profile.setUser(user);
+        profile.setAbout(request.getAbout());
+        profile.setTitle(request.getTitle());
+        profile.setLocation(request.getLocation());
+        profile.setPhone(request.getPhone());
+        profile.setWebsite(request.getWebsite());
+        profile.setGithub(request.getGithub());
+        profile.setLinkedin(request.getLinkedin());
+        profile.setTwitter(request.getTwitter());
+        profile.setInstagram(request.getInstagram());
+        profile.setProfileImageUrl(request.getProfileImageUrl());
+        profile.setCoverImageUrl(request.getCoverImageUrl());
+
+        Profile saved = profileRepository.save(profile);
+        return mapToProfileResponse(saved);
+    }
 
     @Override
     public ProfileResponse getProfileByUserId(Long userId) {
