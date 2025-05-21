@@ -1,51 +1,105 @@
-import { Link } from "react-router-dom";
-import {
-  HiOutlineHome,
-  HiOutlineCog6Tooth,
-  HiOutlineBriefcase,
-  HiOutlineUser,
-  HiOutlineDocumentText,
-  HiOutlineChatBubbleLeftRight
-} from "react-icons/hi2";
-import logo from '../assets/logo.png';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { FaBehance, FaDribbble, FaInstagram, FaBars, FaTimes } from "react-icons/fa";
+import profileImg from '../assets/profile.png';
 
 const menu = [
-  { to: "/", icon: <HiOutlineHome size={32} />, label: "Anasayfa" },
-  { to: "/skills", icon: <HiOutlineCog6Tooth size={32} />, label: "Yetenekler" },
-  { to: "/projects", icon: <HiOutlineBriefcase size={32} />, label: "Projeler" },
-  { to: "/profile", icon: <HiOutlineUser size={32} />, label: "Profil" },
-  { to: "/resume", icon: <HiOutlineDocumentText size={32} />, label: "Özgeçmiş" },
-  { to: "/contact", icon: <HiOutlineChatBubbleLeftRight size={32} />, label: "İletişim" },
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/services", label: "Services" },
+  { to: "/works", label: "Works" },
+  { to: "/blogs", label: "Blogs" },
+  { to: "/contact", label: "Contact" },
 ];
 
 export default function Sidebar() {
+  const location = useLocation();
+  const [open, setOpen] = useState(false);
+
   return (
-    <aside className="fixed top-0 left-0 h-full w-20 bg-white shadow flex flex-col items-center z-20">
-      <div className="w-16 h-16 mt-4 mb-8 flex items-center justify-center">
-        <img src={logo} alt="Logo" className="w-12 h-12" />
+    <>
+      {/* Hamburger Icon - Only mobile */}
+      <button
+        className="fixed top-4 left-4 z-40 md:hidden bg-white p-2 rounded-full shadow"
+        onClick={() => setOpen(true)}
+        aria-label="Menüyü Aç"
+      >
+        <FaBars size={24} />
+      </button>
+
+      {/* Mobile Menu */}
+      {open && (
+        <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex">
+          <aside className="w-72 bg-white min-h-full flex flex-col justify-between items-center px-0 py-12 relative animate-slideInLeft">
+            <button
+              className="absolute top-4 right-4 text-gray-500 hover:text-indigo-500"
+              onClick={() => setOpen(false)}
+              aria-label="Menüyü Kapat"
+            >
+              <FaTimes size={28} />
+            </button>
+            <div className="flex flex-col items-center w-full">
+              <img src={profileImg} alt="Profile" className="w-24 h-24 rounded-full border-4 border-indigo-100 object-cover" />
+              <div className="relative w-full flex flex-col items-center mt-4 mb-10">
+                <h2 className="text-xl font-bold text-gray-800 z-10">Robert Elisc</h2>
+                <span className="text-3xl text-indigo-100 font-cursive absolute top-2 left-1/2 -translate-x-1/2 opacity-30 select-none pointer-events-none whitespace-nowrap">Robert Elisc</span>
       </div>
-      <nav className="flex flex-col gap-0 flex-1 justify-center w-full">
+              <nav className="flex flex-col gap-2 items-center w-full">
         {menu.map((item, i) => (
           <Link
             key={i}
             to={item.to}
-            className="group flex justify-center py-4 border-b border-gray-200 border border-t-0 border-l-0 border-r-0 border-[0.5px] text-gray-600 hover:text-primary-600 transition-colors relative overflow-visible"
-          >
-            {/* İkon */}
-            <span
-              className="transition-all duration-200 ease-in-out group-hover:opacity-0 group-hover:scale-50"
-            >
-              {item.icon}
-            </span>
-            {/* Menü İsmi */}
-            <span
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 ease-in-out bg-white px-3 py-1 rounded shadow text-sm font-medium pointer-events-none"
+                    className={`w-full text-center py-2 text-lg font-medium rounded transition-colors ${location.pathname === item.to ? 'text-indigo-400' : 'text-gray-400 hover:text-indigo-400'}`}
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+            <div className="flex flex-col items-center gap-4 mt-10">
+              <div className="flex gap-3 mb-2">
+                <a href="#" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaBehance size={20} /></a>
+                <a href="#" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaDribbble size={20} /></a>
+                <a href="#" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaInstagram size={20} /></a>
+              </div>
+              <span className="text-xs text-gray-400 text-center">Copyright ©2022 Robert Elisc.<br />All right reserved.</span>
+            </div>
+          </aside>
+          {/* Kapanınca arka planı tıklayınca da menü kapansın */}
+          <div className="flex-1" onClick={() => setOpen(false)} />
+        </div>
+      )}
+
+      {/* Sidebar - Only md and up */}
+      <aside className="hidden md:flex w-[320px] min-h-screen bg-white flex-col justify-between items-center border-r border-gray-100 px-0 py-12">
+        <div className="flex flex-col items-center w-full">
+          <img src={profileImg} alt="Profile" className="w-28 h-28 rounded-full border-4 border-indigo-100 object-cover" />
+          <div className="relative w-full flex flex-col items-center mt-4 mb-10">
+            <h2 className="text-2xl font-bold text-gray-800 z-10">Robert Elisc</h2>
+            <span className="text-5xl text-indigo-100 font-cursive absolute top-2 left-1/2 -translate-x-1/2 opacity-30 select-none pointer-events-none whitespace-nowrap">Robert Elisc</span>
+          </div>
+          <nav className="flex flex-col gap-2 items-center w-full">
+            {menu.map((item, i) => (
+              <Link
+                key={i}
+                to={item.to}
+                className={`w-full text-center py-2 text-lg font-medium rounded transition-colors ${location.pathname === item.to ? 'text-indigo-400' : 'text-gray-400 hover:text-indigo-400'}`}
             >
               {item.label}
-            </span>
           </Link>
         ))}
       </nav>
+        </div>
+        <div className="flex flex-col items-center gap-4 mt-10">
+          <div className="flex gap-3 mb-2">
+            <a href="#" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaBehance size={20} /></a>
+            <a href="#" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaDribbble size={20} /></a>
+            <a href="#" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaInstagram size={20} /></a>
+          </div>
+          <span className="text-xs text-gray-400 text-center">Copyright ©2022 Robert Elisc.<br />All right reserved.</span>
+        </div>
     </aside>
+    </>
   );
 } 

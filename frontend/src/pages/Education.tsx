@@ -1,59 +1,25 @@
-import { motion } from 'framer-motion'
+import React from "react";
+import { motion } from "framer-motion";
 
 const Education = () => {
-  const educations = [
-    {
-      id: 1,
-      school: "Örnek Üniversitesi",
-      degree: "Lisans",
-      fieldOfStudy: "Bilgisayar Mühendisliği",
-      startDate: "2020-09-01",
-      endDate: "2024-06-01",
-      description: "Bilgisayar Mühendisliği lisans programı",
-      location: "İstanbul",
-      gpa: 3.5
-    }
-  ]
-
   return (
-    <div className="container mx-auto px-4 py-8">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="max-w-4xl mx-auto"
-      >
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Eğitim</h1>
-
-        <div className="space-y-6">
-          {educations.map((education) => (
-            <motion.div
-              key={education.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-lg shadow-md p-6"
-            >
-              <div className="flex justify-between items-start">
-                <div>
-                  <h2 className="text-xl font-semibold text-gray-900">{education.school}</h2>
-                  <p className="text-gray-600">{education.degree} - {education.fieldOfStudy}</p>
-                  <p className="text-gray-500 text-sm mt-1">
-                    {new Date(education.startDate).getFullYear()} - {new Date(education.endDate).getFullYear()}
-                  </p>
-                </div>
-                <div className="text-right">
-                  <p className="text-gray-600">{education.location}</p>
-                  <p className="text-gray-500 text-sm">GPA: {education.gpa}</p>
-                </div>
-              </div>
-              <p className="text-gray-600 mt-4">{education.description}</p>
-            </motion.div>
-          ))}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="w-full h-full flex flex-col gap-4"
+    >
+      <h1 className="text-4xl font-bold">Eğitim</h1>
+      <div className="flex flex-col gap-4">
+        {/* Eğitim bilgilerinizi buraya ekleyebilirsiniz */}
+        <div className="bg-white p-4 rounded-lg shadow">
+          <h2 className="text-xl font-semibold">Üniversite Adı</h2>
+          <p className="text-gray-600">Bölüm</p>
+          <p className="text-gray-500">2019 - 2023</p>
         </div>
-      </motion.div>
-    </div>
-  )
-}
+      </div>
+    </motion.div>
+  );
+};
 
-export default Education 
+export default Education; 
