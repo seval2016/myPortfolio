@@ -1,10 +1,11 @@
 import React from 'react';
 import { educations } from '../data/educations';
+import Title from '../components/common/Title';
 
 const Education: React.FC = () => {
   return (
     <div className="w-full min-h-screen bg-white flex flex-col items-center py-12 px-4">
-      <h1 className="text-3xl font-bold mb-8 text-indigo-700">Education</h1>
+      <Title subtitle="- EDUCATION" title="My Education" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
         {educations.map((edu, index) => (
           <div key={index} className="bg-[#f8fafc] rounded-xl shadow p-6 flex flex-col gap-2 border-l-4 border-indigo-400">
