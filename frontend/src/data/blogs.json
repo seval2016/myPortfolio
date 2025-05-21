@@ -1,0 +1,34 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "slug": "modern-web-development",
+      "date": "2024-03-15",
+      "title": "Modern Web Development Trends",
+      "excerpt": "Explore the latest trends in web development, from React to Next.js and beyond.",
+      "content": "Modern web development has evolved significantly over the past few years. With the rise of frameworks like React, Next.js, and Vue.js, developers now have powerful tools at their disposal to create fast, responsive, and user-friendly web applications.\n\nOne of the most significant trends is the move towards server-side rendering and static site generation, which offers better performance and SEO benefits. Next.js, in particular, has gained popularity for its ability to combine the best of both worlds.\n\nAnother important trend is the focus on developer experience. Tools like TypeScript, ESLint, and Prettier have become standard in modern web development workflows, helping teams write more maintainable and error-free code.",
+      "link": "/blogs/modern-web-development",
+      "image": "/src/assets/blog/modern-web-dev.jpg"
+    },
+    {
+      "id": 2,
+      "slug": "ai-in-software-development",
+      "date": "2024-03-10",
+      "title": "The Impact of AI on Software Development",
+      "excerpt": "How artificial intelligence is transforming the way we write and maintain code.",
+      "content": "Artificial Intelligence is revolutionizing software development in ways we couldn't have imagined a few years ago. From code completion to automated testing, AI tools are becoming an integral part of the development process.\n\nOne of the most significant impacts is in the area of code generation. Tools like GitHub Copilot and ChatGPT can help developers write code faster and more efficiently. However, it's important to note that these tools are meant to assist developers, not replace them.\n\nAI is also making testing more efficient. Automated testing tools can now generate test cases and identify potential bugs before they make it to production.",
+      "link": "/blogs/ai-in-software-development",
+      "image": "/src/assets/blog/ai-dev.jpg"
+    },
+    {
+      "id": 3,
+      "slug": "responsive-design-principles",
+      "date": "2024-03-05",
+      "title": "Essential Responsive Design Principles",
+      "excerpt": "Learn the key principles of creating responsive web designs that work on all devices.",
+      "content": "Responsive design is no longer optional in today's multi-device world. With users accessing websites from smartphones, tablets, and desktops, it's crucial to ensure your website looks and functions well on all screen sizes.\n\nThe key principles of responsive design include:\n\n1. Mobile-first approach\n2. Fluid grids\n3. Flexible images\n4. Media queries\n5. Breakpoint planning\n\nBy following these principles, you can create websites that provide an optimal viewing experience across a wide range of devices.",
+      "link": "/blogs/responsive-design-principles",
+      "image": "/src/assets/blog/responsive-design.jpg"
+    }
+  ]
+} 

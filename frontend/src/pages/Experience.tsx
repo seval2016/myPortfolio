@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import styles from '../styles/About.module.css';
+import { experiences } from '../data/experiences';
 
 const stats = [
   { number: '10+', label: 'Years Experience' },
@@ -8,22 +9,7 @@ const stats = [
   { number: '15+', label: 'Awards Won' }
 ];
 
-const experiences = [
-  {
-    title: 'Senior UI/UX Designer',
-    company: 'Google',
-    date: '2020 - Present',
-    description: 'Leading the design team in creating innovative user interfaces and experiences for Google products.'
-  },
-  {
-    title: 'UI/UX Designer',
-    company: 'Facebook',
-    date: '2018 - 2020',
-    description: 'Designed user interfaces and experiences for Facebook\'s mobile and web applications.'
-  }
-];
-
-export default function About() {
+export default function Experience() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -35,7 +21,7 @@ export default function About() {
       <div className={styles.contentContainer}>
         {/* Başlık */}
         <div className={styles.header}>
-          <span className={styles.subtitle}>- ABOUT</span>
+          <span className={styles.subtitle}>- EXPERIENCE</span>
           <h1 className={styles.title}>My Experience</h1>
         </div>
 
@@ -53,9 +39,10 @@ export default function About() {
         <div className={styles.experienceContainer}>
           {experiences.map((exp, index) => (
             <div key={index} className={styles.experienceCard}>
-              <h3 className={styles.experienceTitle}>{exp.title}</h3>
+              <h3 className={styles.experienceTitle}>{exp.title} <span className={styles.experienceType}>({exp.employmentType})</span></h3>
               <div className={styles.experienceCompany}>{exp.company}</div>
-              <div className={styles.experienceDate}>{exp.date}</div>
+              <div className={styles.experienceDate}>{exp.startDate} - {exp.endDate || (exp.current ? 'Present' : '')}</div>
+              {exp.location && <div className={styles.experienceLocation}>{exp.location}</div>}
               <p className={styles.experienceDescription}>{exp.description}</p>
             </div>
           ))}

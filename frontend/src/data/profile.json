@@ -1,0 +1,14 @@
+{
+  "id": 1,
+  "about": "Creative developer with a passion for modern web technologies and UI/UX.",
+  "title": "Frontend Developer",
+  "location": "Florida, USA",
+  "phone": "+1 234 567 890",
+  "website": "https://mywebsite.com",
+  "github": "https://github.com/username",
+  "linkedin": "https://linkedin.com/in/username",
+  "twitter": "https://twitter.com/username",
+  "instagram": "https://instagram.com/username",
+  "profileImageUrl": "/images/profile.jpg",
+  "coverImageUrl": "/images/cover.jpg"
+} 

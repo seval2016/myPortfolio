@@ -1,24 +1,23 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import { educations } from '../data/educations';
 
-const Education = () => {
+const Education: React.FC = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="w-full h-full flex flex-col gap-4"
-    >
-      <h1 className="text-4xl font-bold">Eğitim</h1>
-      <div className="flex flex-col gap-4">
-        {/* Eğitim bilgilerinizi buraya ekleyebilirsiniz */}
-        <div className="bg-white p-4 rounded-lg shadow">
-          <h2 className="text-xl font-semibold">Üniversite Adı</h2>
-          <p className="text-gray-600">Bölüm</p>
-          <p className="text-gray-500">2019 - 2023</p>
-        </div>
+    <div className="w-full min-h-screen bg-white flex flex-col items-center py-12 px-4">
+      <h1 className="text-3xl font-bold mb-8 text-indigo-700">Education</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+        {educations.map((edu, index) => (
+          <div key={index} className="bg-[#f8fafc] rounded-xl shadow p-6 flex flex-col gap-2 border-l-4 border-indigo-400">
+            <div className="text-lg font-semibold text-gray-800 mb-1">{edu.school} - {edu.degree}</div>
+            <div className="text-indigo-600 font-medium">{edu.fieldOfStudy}</div>
+            <div className="text-sm text-gray-500">{edu.startDate} - {edu.endDate || 'Present'}</div>
+            <div className="text-sm text-gray-500">{edu.location}</div>
+            {edu.gpa && <div className="text-sm text-indigo-700 font-semibold">GPA: {edu.gpa}</div>}
+            <div className="text-sm text-gray-600 mt-1">{edu.description}</div>
+          </div>
+        ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

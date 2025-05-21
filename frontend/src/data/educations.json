@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "school": "University of Florida",
+    "degree": "Bachelor of Science",
+    "fieldOfStudy": "Computer Science",
+    "startDate": "2015-09-01",
+    "endDate": "2019-06-01",
+    "description": "Graduated with honors.",
+    "location": "Florida, USA",
+    "gpa": 3.8
+  },
+  {
+    "id": 2,
+    "school": "MIT",
+    "degree": "Master of Science",
+    "fieldOfStudy": "Software Engineering",
+    "startDate": "2019-09-01",
+    "endDate": "2021-06-01",
+    "description": "Focused on distributed systems.",
+    "location": "Cambridge, MA, USA",
+    "gpa": 3.9
+  }
+] 

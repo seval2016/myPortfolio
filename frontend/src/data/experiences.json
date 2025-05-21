@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "company": "Company A",
+    "startDate": "2020-01-01",
+    "endDate": "2022-01-01",
+    "description": "Worked on awesome projects.",
+    "location": "Florida, USA",
+    "employmentType": "Full-time",
+    "current": false
+  },
+  {
+    "id": 2,
+    "title": "Full Stack Developer",
+    "company": "Company B",
+    "startDate": "2018-06-01",
+    "endDate": "2019-12-31",
+    "description": "Developed full stack applications.",
+    "location": "Remote",
+    "employmentType": "Contract",
+    "current": false
+  },
+  {
+    "id": 3,
+    "title": "Intern",
+    "company": "Company C",
+    "startDate": "2017-07-01",
+    "endDate": "2017-09-01",
+    "description": "Summer internship.",
+    "location": "New York, USA",
+    "employmentType": "Internship",
+    "current": false
+  }
+] 

@@ -1,16 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaBehance, FaDribbble, FaInstagram, FaBars, FaTimes } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaBriefcase, FaBars, FaTimes } from "react-icons/fa";
 import profileImg from '../assets/profile.png';
-
-const menu = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/services", label: "Services" },
-  { to: "/works", label: "Works" },
-  { to: "/blogs", label: "Blogs" },
-  { to: "/contact", label: "Contact" },
-];
+import menu from '../data/menu.json';
 
 export default function Sidebar() {
   const location = useLocation();
@@ -20,7 +12,7 @@ export default function Sidebar() {
     <>
       {/* Hamburger Icon - Only mobile */}
       <button
-        className="fixed top-4 left-4 z-40 md:hidden bg-white p-2 rounded-full shadow"
+        className="fixed top-8 left-4 z-40 md:hidden bg-white p-2 rounded-full shadow"
         onClick={() => setOpen(true)}
         aria-label="Menüyü Aç"
       >
@@ -59,9 +51,9 @@ export default function Sidebar() {
             </div>
             <div className="flex flex-col items-center gap-4 mt-10">
               <div className="flex gap-3 mb-2">
-                <a href="#" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaBehance size={20} /></a>
-                <a href="#" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaDribbble size={20} /></a>
-                <a href="#" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaInstagram size={20} /></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaLinkedin size={20} /></a>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaGithub size={20} /></a>
+                <a href="https://www.indeed.com/" target="_blank" rel="noopener noreferrer" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaBriefcase size={20} /></a>
               </div>
               <span className="text-xs text-gray-400 text-center">Copyright ©2022 Robert Elisc.<br />All right reserved.</span>
             </div>
@@ -93,9 +85,9 @@ export default function Sidebar() {
         </div>
         <div className="flex flex-col items-center gap-4 mt-10">
           <div className="flex gap-3 mb-2">
-            <a href="#" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaBehance size={20} /></a>
-            <a href="#" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaDribbble size={20} /></a>
-            <a href="#" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaInstagram size={20} /></a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaLinkedin size={20} /></a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaGithub size={20} /></a>
+            <a href="https://www.indeed.com/" target="_blank" rel="noopener noreferrer" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaBriefcase size={20} /></a>
           </div>
           <span className="text-xs text-gray-400 text-center">Copyright ©2022 Robert Elisc.<br />All right reserved.</span>
         </div>

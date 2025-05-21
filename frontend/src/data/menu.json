@@ -1,0 +1,10 @@
+[
+  { "to": "/", "label": "Home" },
+  { "to": "/experience", "label": "Experience" },
+  { "to": "/services", "label": "Services" },
+  { "to": "/works", "label": "Works" },
+  { "to": "/blogs", "label": "Blogs" },
+  { "to": "/certificates", "label": "Certificates" },
+  { "to": "/education", "label": "Education" },
+  { "to": "/contact", "label": "Contact" }
+] 

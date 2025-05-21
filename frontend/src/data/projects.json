@@ -1,45 +1,50 @@
-{
-  "projects": [
-    {
-      "image": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
-      "category": "UI DESIGN",
-      "title": "Firogo Majestic Co Ltd."
-    },
-    {
-      "image": "https://images.unsplash.com/photo-1519985176271-adb1088fa94c?auto=format&fit=crop&w=400&q=80",
-      "category": "UI DESIGN",
-      "title": "Firogo Majestic Co Ltd."
-    },
-    {
-      "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
-      "category": "UI DESIGN",
-      "title": "Firogo Majestic Co Ltd."
-    },
-    {
-      "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
-      "category": "UI DESIGN",
-      "title": "Firogo Majestic Co Ltd."
-    },
-    {
-      "image": "https://images.unsplash.com/photo-1519985176271-adb1088fa94c?auto=format&fit=crop&w=400&q=80",
-      "category": "UI DESIGN",
-      "title": "New Project 1"
-    },
-    {
-      "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
-      "category": "UI DESIGN",
-      "title": "New Project 2"
-    },
-    {
-      "image": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
-      
-      "category": "UI DESIGN",
-      "title": "New Project 3"
-    },
-    {
-      "image": "https://images.unsplash.com/photo-1519985176271-adb1088fa94c?auto=format&fit=crop&w=400&q=80",
-      "category": "UI DESIGN",
-      "title": "New Project 4"
-    }
-  ]
-} 
+[
+  {
+    "id": 1,
+    "title": "E-commerce Website",
+    "description": "A full-featured e-commerce platform with shopping cart, payment integration, and admin dashboard.",
+    "startDate": "2022-01-01",
+    "endDate": "2022-06-01",
+    "url": "https://ecommerce.example.com",
+    "githubUrl": "https://github.com/username/ecommerce",
+    "imageUrl": "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&q=80",
+    "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+    "current": false
+  },
+  {
+    "id": 2,
+    "title": "Mobile App Design",
+    "description": "A modern mobile app UI/UX design for a social platform.",
+    "startDate": "2021-03-01",
+    "endDate": "2021-08-01",
+    "url": "https://appdesign.example.com",
+    "githubUrl": null,
+    "imageUrl": "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80",
+    "technologies": ["Figma", "Sketch"],
+    "current": false
+  },
+  {
+    "id": 3,
+    "title": "Brand Identity",
+    "description": "Branding and identity design for a startup.",
+    "startDate": "2020-05-01",
+    "endDate": "2020-09-01",
+    "url": null,
+    "githubUrl": null,
+    "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80",
+    "technologies": ["Illustrator", "Photoshop"],
+    "current": false
+  },
+  {
+    "id": 4,
+    "title": "Dashboard UI",
+    "description": "A responsive dashboard UI for analytics and reporting.",
+    "startDate": "2023-01-01",
+    "endDate": null,
+    "url": "https://dashboard.example.com",
+    "githubUrl": "https://github.com/username/dashboard-ui",
+    "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    "technologies": ["Vue.js", "D3.js", "Tailwind CSS"],
+    "current": true
+  }
+] 

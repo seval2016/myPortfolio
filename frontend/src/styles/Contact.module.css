@@ -1,63 +1,58 @@
-.container {
-  @apply w-full min-h-screen bg-white;
+.contactWrapper {
+  @apply w-full min-h-screen bg-[#eef9fd] flex items-start justify-center pt-20 md:pt-0 md:items-center;
 }
 
-.contentContainer {
-  @apply max-w-6xl mx-auto px-4 py-12;
+.contactContainer {
+  @apply flex flex-row w-full max-w-5xl bg-transparent py-16 gap-12 justify-center md:flex-col md:gap-8 md:py-8 sm:py-4 sm:gap-4;
 }
 
-.header {
-  @apply mb-12 text-center;
+.infoSection {
+  @apply flex-1 flex flex-col justify-center pl-8 md:pl-0 sm:pl-0;
 }
 
 .subtitle {
-  @apply text-xs text-gray-400 tracking-widest font-semibold;
+  @apply text-xs text-[#7b8ca7] font-semibold tracking-widest uppercase mb-3;
 }
 
 .title {
-  @apply text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-2;
+  @apply text-4xl font-extrabold text-[#181f3a] mb-4 md:text-5xl md:mb-6;
 }
 
-.contactInfoGrid {
-  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12;
+.description {
+  @apply text-gray-500 text-base mb-8 max-w-md sm:text-sm sm:mb-4 md:text-lg md:mb-10;
 }
 
-.contactInfoCard {
-  @apply p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300;
+.infoList {
+  @apply flex flex-col gap-3;
 }
 
-.contactIcon {
-  @apply w-8 h-8 text-indigo-600 mb-4;
+.infoLink {
+  @apply text-[#181f3a] font-bold text-base underline hover:text-indigo-600 transition-colors sm:text-sm md:text-lg;
 }
 
-.contactInfoTitle {
-  @apply text-lg font-semibold text-gray-900 mb-2;
-}
-
-.contactInfoValue {
-  @apply text-gray-600;
-}
-
-.formContainer {
-  @apply max-w-2xl mx-auto;
-}
-
-.form {
-  @apply space-y-6;
-}
-
-.formGroup {
-  @apply space-y-2;
+.formSection {
+  @apply flex-1 flex flex-col gap-3 justify-center pr-8 md:pr-0 sm:pr-0;
 }
 
 .input {
-  @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent;
+  @apply w-full px-5 py-3 rounded-md border border-gray-200 bg-white text-base text-[#181f3a] shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 placeholder-gray-400 sm:px-3 sm:py-2 sm:text-sm md:px-7 md:py-3 md:text-base transition-all duration-150;
 }
 
 .textarea {
-  @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-none;
+  @apply w-full px-5 py-3 rounded-md border border-gray-200 bg-white text-base text-[#181f3a] shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 placeholder-gray-400 min-h-[150px] max-h-[300px] resize-none sm:px-3 sm:py-2 sm:text-sm md:px-7 md:py-3 md:text-base transition-all duration-150;
 }
 
 .submitButton {
-  @apply w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-indigo-700 transition-colors duration-300;
+  @apply bg-[#181f3a] text-white font-bold text-base rounded-md py-2 transition-colors hover:bg-indigo-600 sm:text-sm sm:py-2 md:text-base md:py-2 shadow-sm;
+}
+
+@media (max-width: 900px) {
+  .contactContainer {
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 0;
+  }
+  .infoSection, .formSection {
+    padding: 0 16px;
+  }
 } 
