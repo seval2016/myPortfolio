@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaLinkedin, FaGithub, FaBriefcase, FaBars, FaTimes } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaBriefcase, FaBars, FaTimes, FaCode } from "react-icons/fa";
 import profileImg from '../assets/profile.png';
 import menu from '../data/menu.json';
 

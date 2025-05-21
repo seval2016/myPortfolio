@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Full Stack Web Development",
+    "issuer": "Coursera",
+    "issueDate": "2022-05-01",
+    "expiryDate": null,
+    "credentialId": "ABC123",
+    "credentialUrl": "https://coursera.org/verify/ABC123",
+    "imageUrl": "https://placehold.co/120x120/png"
+  },
+  {
+    "id": 2,
+    "name": "Java Programming",
+    "issuer": "Udemy",
+    "issueDate": "2021-10-15",
+    "expiryDate": null,
+    "credentialId": "XYZ789",
+    "credentialUrl": "https://udemy.com/certificate/XYZ789",
+    "imageUrl": "https://placehold.co/120x120/png"
+  }
+] 

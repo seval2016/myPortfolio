@@ -4,8 +4,8 @@ import { Toaster } from 'react-hot-toast'
 import Sidebar from './components/Sidebar'
 import Home from './pages/Home'
 import Experience from './pages/Experience'
-import Services from './pages/Services'
-import Works from './pages/Works'
+import Skills from './pages/Skill'
+import MyProjects from './pages/MyProjects'
 import Blogs from './pages/Blogs'
 import BlogDetail from './pages/BlogDetail'
 import Contact from './pages/Contact'
@@ -29,13 +29,14 @@ function App() {
           <div className="flex-1">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/education" element={<Education />} />
               <Route path="/experience" element={<Experience />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/works" element={<Works />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/myProjects" element={<MyProjects />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/blogs/:slug" element={<BlogDetail />} />
               <Route path="/certificates" element={<Certificates />} />
-              <Route path="/education" element={<Education />} />
+              
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </div>

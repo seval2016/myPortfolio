@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { projects } from '../data/projects';
+import Title from '../components/common/Title';
 
-export default function Works() {
+export default function MyProjects() {
   const [visibleProjects, setVisibleProjects] = useState(6);
 
   const loadMore = () => {
@@ -18,17 +19,7 @@ export default function Works() {
       className="w-full min-h-screen bg-gradient-to-b from-white to-gray-50"
     >
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <span className="text-sm text-indigo-600 font-semibold tracking-wide uppercase">Portfolio</span>
-          <h1 className="mt-2 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
-            My Works
-          </h1>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-            A collection of my recent projects and achievements
-          </p>
-        </div>
-
+        <Title subtitle="- MY PROJECTS" title="My Projects" />
         {/* Projects Grid - 3 columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.slice(0, visibleProjects).map((project) => (

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import styles from '../styles/About.module.css';
 import { experiences } from '../data/experiences';
+import Title from '../components/common/Title';
 
 const stats = [
   { number: '10+', label: 'Years Experience' },
@@ -19,11 +20,7 @@ export default function Experience() {
       className={styles.container}
     >
       <div className={styles.contentContainer}>
-        {/* Başlık */}
-        <div className={styles.header}>
-          <span className={styles.subtitle}>- EXPERIENCE</span>
-          <h1 className={styles.title}>My Experience</h1>
-        </div>
+        <Title subtitle="- EXPERIENCE" title="My Experience" />
 
         {/* İstatistikler */}
         <div className={styles.statsContainer}>

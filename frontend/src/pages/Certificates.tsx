@@ -1,35 +1,13 @@
 import React from 'react';
-import type { Certificate } from '../types/Certificate';
-
-const mockCertificates: Certificate[] = [
-  {
-    id: 1,
-    name: 'Full Stack Web Development',
-    issuer: 'Coursera',
-    issueDate: '2022-05-01',
-    expiryDate: null,
-    credentialId: 'ABC123',
-    credentialUrl: 'https://coursera.org/verify/ABC123',
-    imageUrl: 'https://placehold.co/120x120/png',
-  },
-  {
-    id: 2,
-    name: 'Java Programming',
-    issuer: 'Udemy',
-    issueDate: '2021-10-15',
-    expiryDate: null,
-    credentialId: 'XYZ789',
-    credentialUrl: 'https://udemy.com/certificate/XYZ789',
-    imageUrl: 'https://placehold.co/120x120/png',
-  },
-];
+import Title from '../components/common/Title';
+import certificates from '../data/certificates.json';
 
 const Certificates: React.FC = () => {
   return (
     <div className="w-full min-h-screen bg-white flex flex-col items-center py-12 px-4">
-      <h1 className="text-3xl font-bold mb-8 text-indigo-700">Certificates</h1>
+      <Title subtitle="- CERTIFICATES" title="My Certificates" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl">
-        {mockCertificates.map(cert => (
+        {certificates.map(cert => (
           <div key={cert.id} className="bg-[#f8fafc] rounded-xl shadow p-6 flex flex-col items-center">
             <img src={cert.imageUrl || ''} alt={cert.name} className="w-24 h-24 object-cover rounded mb-4 border" />
             <div className="text-lg font-semibold text-gray-800 mb-1">{cert.name}</div>

@@ -1,0 +1,101 @@
+.container {
+  @apply w-full min-h-screen bg-gradient-to-b from-white to-gray-50;
+}
+
+.contentContainer {
+  @apply max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8;
+}
+
+.header {
+  @apply text-center mb-16;
+}
+
+.subtitle {
+  @apply text-sm text-indigo-600 font-semibold tracking-wide uppercase;
+}
+
+.title {
+  @apply mt-2 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl;
+}
+
+.subtitleText {
+  @apply mt-4 text-xl text-gray-500 max-w-2xl mx-auto;
+}
+
+.skillsContainer {
+  @apply space-y-12;
+}
+
+.categorySection {
+  @apply bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300;
+}
+
+.categoryHeader {
+  @apply flex items-center gap-4 mb-8 pb-4 border-b border-gray-200;
+}
+
+.categoryIcon {
+  @apply text-4xl;
+}
+
+.categoryTitle {
+  @apply text-lg font-semibold text-gray-900;
+  font-weight: 500;
+}
+
+.skillsGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.skillCard {
+  @apply bg-white rounded-xl p-4 flex flex-col items-center shadow border border-gray-100 transition-all duration-200 relative overflow-hidden min-h-[120px];
+  box-shadow: 0 2px 8px 0 rgba(80, 112, 255, 0.07);
+}
+.skillCard:hover {
+  @apply shadow-md;
+  transform: translateY(-3px) scale(1.01);
+}
+.cardTopBar {
+  @apply w-full h-3 mb-4 rounded-t-3xl bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-600 flex items-center justify-center;
+}
+.cardIcon {
+  @apply text-2xl text-white drop-shadow-lg;
+  margin-top: -18px;
+}
+.skillHeaderCompact {
+  @apply flex flex-col items-center mb-1 w-full;
+}
+.skillNameCompact {
+  @apply text-base font-semibold text-gray-900 mb-1 text-center;
+}
+.proficiencyContainerCompact {
+  @apply flex items-center w-full gap-2 mb-1;
+}
+.proficiencyBarCompact {
+  @apply w-3/4 h-1.5 bg-gray-200 rounded-full overflow-hidden;
+}
+.proficiencyFillCompact {
+  @apply h-full bg-gradient-to-r from-indigo-500 to-indigo-700 rounded-full;
+}
+.proficiencyLevelCompact {
+  @apply text-xs text-gray-500 font-medium ml-2;
+}
+.skillDescriptionCompact {
+  @apply text-gray-500 text-xs leading-snug text-center mt-1;
+}
+
+.skillHeader {
+  @apply mb-4;
+}
+
+.skillName {
+  @apply text-lg font-semibold text-gray-900 mb-3;
+}
+
+.proficiencyContainer {
+  @apply space-y-2;
+}
+
+.proficiencyLevel {
+  @apply text-sm text-gray-600 font-medium;
+} 
