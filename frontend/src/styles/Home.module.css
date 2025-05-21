@@ -1,0 +1,107 @@
+.container {
+  @apply flex flex-col md:flex-row min-h-screen bg-gradient-to-br from-gray-50 to-indigo-50;
+}
+
+.sidebarSpace {
+  @apply hidden md:block w-[320px];
+}
+
+.contentContainer {
+  @apply flex flex-1 items-center justify-center px-4 py-8 md:pl-0 md:pr-8 md:py-12;
+}
+
+.mainContent {
+  @apply flex flex-col md:flex-row items-center w-full max-w-6xl gap-12 md:gap-16;
+}
+
+.textSection {
+  @apply flex-1 flex flex-col items-center md:items-start justify-center text-center md:text-left;
+}
+
+.title {
+  @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight;
+}
+
+.nameHighlight {
+  @apply text-indigo-500;
+}
+
+.roleText {
+  @apply bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent;
+}
+
+.locationText {
+  @apply relative;
+}
+
+.locationUnderline {
+  @apply absolute bottom-0 left-0 w-full h-2 bg-indigo-300/30 -z-10;
+}
+
+.description {
+  @apply text-lg sm:text-xl text-gray-600 mb-8 max-w-xl leading-relaxed;
+}
+
+.experienceHighlight {
+  @apply text-indigo-500 font-semibold;
+}
+
+.buttonContainer {
+  @apply flex flex-col sm:flex-row gap-4 mb-12 w-full sm:w-auto justify-center md:justify-start;
+}
+
+.projectButton {
+  @apply relative px-8 py-4 rounded-xl font-semibold overflow-hidden transition-all duration-300 bg-white border-2 border-indigo-500 text-indigo-500 hover:text-white;
+}
+
+.buttonText {
+  @apply relative z-10;
+}
+
+.buttonHover {
+  @apply absolute inset-0 bg-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left;
+}
+
+.downloadButton {
+  @apply px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+}
+
+.contactInfo {
+  @apply flex flex-col gap-2 mt-4 border-l-4 border-indigo-400 pl-6 items-center md:items-start;
+}
+
+.contactText {
+  @apply text-base text-gray-700 font-medium hover:text-indigo-500 transition-colors cursor-pointer;
+}
+
+.addressText {
+  @apply text-base text-indigo-500 font-medium;
+}
+
+.profileSection {
+  @apply flex-1 flex items-center justify-center relative mt-8 md:mt-0;
+}
+
+.profileContainer {
+  @apply relative;
+}
+
+.backgroundShape {
+  @apply absolute z-0 w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[380px];
+}
+
+.profileImage {
+  @apply w-[200px] h-[200px] sm:w-[240px] sm:h-[240px] md:w-[320px] md:h-[320px] rounded-full object-cover relative z-10 border-8 border-white shadow-2xl;
+}
+
+.decorativeElement {
+  @apply absolute z-20;
+}
+
+.starIcon {
+  @apply absolute top-0 right-0;
+}
+
+.clockIcon {
+  @apply absolute bottom-0 left-0;
+} 

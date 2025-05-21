@@ -1,0 +1,59 @@
+.container {
+  @apply w-full min-h-screen bg-white;
+}
+
+.contentContainer {
+  @apply max-w-6xl mx-auto px-4 py-12;
+}
+
+.header {
+  @apply mb-8;
+}
+
+.subtitle {
+  @apply text-xs text-gray-400 tracking-widest font-semibold;
+}
+
+.title {
+  @apply text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-2;
+}
+
+.statsContainer {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12;
+}
+
+.statBox {
+  @apply bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow;
+}
+
+.statNumber {
+  @apply text-3xl font-bold text-indigo-500 mb-2;
+}
+
+.statLabel {
+  @apply text-gray-600;
+}
+
+.experienceContainer {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+}
+
+.experienceCard {
+  @apply bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow;
+}
+
+.experienceTitle {
+  @apply text-xl font-bold text-gray-900 mb-2;
+}
+
+.experienceCompany {
+  @apply text-indigo-500 font-semibold mb-2;
+}
+
+.experienceDate {
+  @apply text-gray-500 text-sm mb-4;
+}
+
+.experienceDescription {
+  @apply text-gray-600;
+} 

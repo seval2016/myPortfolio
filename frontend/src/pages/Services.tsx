@@ -1,37 +1,34 @@
 import { motion } from 'framer-motion';
-import ServiceCard from '../common/ServiceCard';
+import styles from '../styles/Services.module.css';
 
 const services = [
   {
-    number: '01',
+    icon: (
+      <svg className={styles.serviceIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
     title: 'Web Design',
-    desc: 'Lorem ipsum dolor sit amet, solar adipiscing elit. Non nisl'
+    description: 'Creating beautiful and functional websites that engage users and drive results.'
   },
   {
-    number: '02',
-    title: 'UI/UX',
-    desc: 'Lorem ipsum dolor sit amet, solar adipiscing elit. Non nisl'
+    icon: (
+      <svg className={styles.serviceIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+      </svg>
+    ),
+    title: 'Mobile Development',
+    description: 'Building native and cross-platform mobile applications for iOS and Android.'
   },
   {
-    number: '03',
-    title: 'Mobile Application',
-    desc: 'Lorem ipsum dolor sit amet, solar adipiscing elit. Non nisl'
-  },
-  {
-    number: '04',
-    title: 'User Research',
-    desc: 'Lorem ipsum dolor sit amet, solar adipiscing elit. Non nisl'
-  },
-  {
-    number: '05',
-    title: 'Animation',
-    desc: 'Lorem ipsum dolor sit amet, solar adipiscing elit. Non nisl'
-  },
-  {
-    number: '06',
-    title: 'Game Development',
-    desc: 'Lorem ipsum dolor sit amet, solar adipiscing elit. Non nisl'
-  },
+    icon: (
+      <svg className={styles.serviceIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+      </svg>
+    ),
+    title: 'UI/UX Design',
+    description: 'Designing intuitive and engaging user interfaces that enhance user experience.'
+  }
 ];
 
 export default function Services() {
@@ -41,28 +38,40 @@ export default function Services() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full min-h-screen bg-white"
+      className={styles.container}
     >
-      <div className="max-w-6xl mx-auto px-2 sm:px-4 py-6 sm:py-10 md:py-16">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 gap-2 sm:gap-4 text-center sm:text-left">
-          <div>
-            <span className="text-xs text-gray-400 tracking-widest font-semibold">- SERVICES</span>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-2">My Services</h1>
-          </div>
-          <a href="mailto:info@elisc.com" className="text-sm font-bold text-indigo-900 underline self-center sm:self-auto mt-2 sm:mt-0">info@elisc.com</a>
+      <div className={styles.contentContainer}>
+        {/* Başlık */}
+        <div className={styles.header}>
+          <span className={styles.subtitle}>- SERVICES</span>
+          <h1 className={styles.title}>What I'm doing</h1>
         </div>
-        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-10 md:mb-16">
-          {services.map((service, i) => (
-            <ServiceCard key={i} {...service} />
+
+        {/* Servis kartları */}
+        <div className={styles.servicesGrid}>
+          {services.map((service, index) => (
+            <div key={index} className={styles.serviceCard}>
+              {service.icon}
+              <h3 className={styles.serviceTitle}>{service.title}</h3>
+              <p className={styles.serviceDescription}>{service.description}</p>
+            </div>
           ))}
         </div>
-        {/* Video kutusu */}
-        <div className="w-full aspect-video rounded-xl overflow-hidden relative group shadow max-w-full sm:max-w-3xl mx-auto">
-          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="intro video" className="w-full h-full object-cover" />
-          <button className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-indigo-700 rounded-full w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center shadow-lg transition">
-            <svg width="28" height="28" fill="currentColor" viewBox="0 0 20 20"><path d="M6.5 5.5v9l7-4.5-7-4.5z" /></svg>
-          </button>
-          <span className="absolute right-2 bottom-2 sm:right-4 sm:bottom-4 bg-white/80 text-gray-900 text-xs font-semibold px-2 sm:px-3 py-1 rounded shadow">INTRO VIDEO</span>
+
+        {/* Video bölümü */}
+        <div className={styles.videoContainer}>
+          <h2 className={styles.videoTitle}>Watch my work process</h2>
+          <div className={styles.videoWrapper}>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Work Process"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       </div>
     </motion.div>
