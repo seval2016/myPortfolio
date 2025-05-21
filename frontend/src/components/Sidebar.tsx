@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaLinkedin, FaGithub, FaBriefcase, FaBars, FaTimes, FaCode } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaBriefcase, FaBars, FaTimes} from "react-icons/fa";
 import profileImg from '../assets/profile.png';
 import menu from '../data/menu.json';
 
@@ -33,8 +33,8 @@ export default function Sidebar() {
             <div className="flex flex-col items-center w-full">
               <img src={profileImg} alt="Profile" className="w-24 h-24 rounded-full border-4 border-indigo-100 object-cover" />
               <div className="relative w-full flex flex-col items-center mt-4 mb-10">
-                <h2 className="text-xl font-bold text-gray-800 z-10">Robert Elisc</h2>
-                <span className="text-3xl text-indigo-100 font-cursive absolute top-2 left-1/2 -translate-x-1/2 opacity-30 select-none pointer-events-none whitespace-nowrap">Robert Elisc</span>
+                <h2 className="text-xl font-bold text-gray-800 z-10">Seval Şentürk</h2>
+                <span className="text-3xl text-indigo-100 font-cursive absolute top-2 left-1/2 -translate-x-1/2 opacity-30 select-none pointer-events-none whitespace-nowrap">Seval Şentürk</span>
       </div>
               <nav className="flex flex-col gap-2 items-center w-full">
         {menu.map((item, i) => (
@@ -55,7 +55,7 @@ export default function Sidebar() {
                 <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaGithub size={20} /></a>
                 <a href="https://www.indeed.com/" target="_blank" rel="noopener noreferrer" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaBriefcase size={20} /></a>
               </div>
-              <span className="text-xs text-gray-400 text-center">Copyright ©2022 Robert Elisc.<br />All right reserved.</span>
+              <span className="text-xs text-gray-400 text-center">Copyright ©2022 Seval Şentürk<br />All right reserved.</span>
             </div>
           </aside>
           {/* Kapanınca arka planı tıklayınca da menü kapansın */}
@@ -68,8 +68,8 @@ export default function Sidebar() {
         <div className="flex flex-col items-center w-full">
           <img src={profileImg} alt="Profile" className="w-28 h-28 rounded-full border-4 border-indigo-100 object-cover" />
           <div className="relative w-full flex flex-col items-center mt-4 mb-10">
-            <h2 className="text-2xl font-bold text-gray-800 z-10">Robert Elisc</h2>
-            <span className="text-5xl text-indigo-100 font-cursive absolute top-2 left-1/2 -translate-x-1/2 opacity-30 select-none pointer-events-none whitespace-nowrap">Robert Elisc</span>
+            <h2 className="text-2xl font-semibold text-gray-800 z-10">Seval Şentürk</h2>
+            <span className="text-3xl text-indigo-100 font-cursive absolute top-4 left-1/2 -translate-x-1/2 opacity-30 select-none pointer-events-none whitespace-nowrap">Full Stack Developer</span>
           </div>
           <nav className="flex flex-col gap-2 items-center w-full">
             {menu.map((item, i) => (
@@ -89,7 +89,7 @@ export default function Sidebar() {
             <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaGithub size={20} /></a>
             <a href="https://www.indeed.com/" target="_blank" rel="noopener noreferrer" className="bg-gray-100 hover:bg-indigo-100 p-2 rounded-full"><FaBriefcase size={20} /></a>
           </div>
-          <span className="text-xs text-gray-400 text-center">Copyright ©2022 Robert Elisc.<br />All right reserved.</span>
+          <span className="text-xs text-gray-400 text-center">Copyright ©2022 Seval Şentürk<br />All right reserved.</span>
         </div>
     </aside>
     </>

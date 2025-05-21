@@ -24,18 +24,18 @@ const Home = () => {
               transition={{ delay: 0.2 }}
             >
               <h1 className={styles.title}>
-                Hi, I'm <span className={styles.nameHighlight}>Elisc!</span><br />
-                <span className={styles.roleText}>
-                  Creative Designer
-                </span><br />
-                Based in <span className={styles.locationText}>
-                  Florida
-                  <span className={styles.locationUnderline}></span>
-                </span>
+                <span className={styles.greeting}>Merhaba, Ben</span>
+                <span className={styles.nameHighlight}>Seval!</span>
               </h1>
-              <p className={styles.description}>
-                I'm a Florida based web designer &amp; front end developer with{' '}
-                <span className={styles.experienceHighlight}>10+ years</span> of experience
+              <h2 className={styles.roleLine}>
+                <span className={styles.roleText}>Java Full Stack Geliştirici</span>
+              </h2>
+              <div className={styles.locationRow}>
+                <span className={styles.locationIcon}>🌍</span>
+                <span className={styles.locationChip}>Türkiye</span>
+              </div>
+              <p className={styles.introText}>
+                Modern web ve backend teknolojilerinde uzman, kullanıcı odaklı yazılım geliştiricisi.
               </p>
               <div className={styles.buttonContainer}>
                 <button className={styles.projectButton}>
